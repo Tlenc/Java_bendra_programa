@@ -14,6 +14,7 @@ public class vienuol {
         int suma = 0;
 
 
+
         boolean arSkaicius = false;
         while (arSkaicius == false) {
             try {
@@ -36,22 +37,28 @@ public class vienuol {
         int veiksmas = sc.nextInt();
         switch (veiksmas) {
             case ACTION_SUM:
-                for (int i = FIRST_NR; i < sk; i++) {
-                    suma += i;
-                }
-                System.out.println("Suma :" + suma);
+               summ(sk,suma);
                 break;
             case ACTION_MULT:
-                for (int i = FIRST_NR; i < sk; i++) {
-                    suma *=  i;
-
-                }
-                System.out.println("Suma :" + suma);
+                multt(sk,suma);
                 break;
 
         }
 
+        }
+    private static void summ(int sk,int suma){
+        for (int i = FIRST_NR; i < sk; i++) {
+            suma += i;
+        }
+        System.out.println("Suma :" + suma);
 
+    }
+    private static void multt(int sk,int suma){
+        for (int i = FIRST_NR; i < sk; i++) {
+            suma *=  i;
+
+        }
+        System.out.println("Suma :" + suma);
     }
 }
 
